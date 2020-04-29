@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    font-family: 'EB Garamond', serif;
+}
+.header {
+    background-color: #3d5698;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 10px; 
+}
+.slogan {
+    margin-top: 10px;
+}
+.banner {
+    background-image: url(images/img-1.jpg);
+    height: 630px;
+    background-position: top;
+    color: #fff;
+    text-align: center;
+}
+.banner h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.banner .top {
+    font-weight: bold;
+    position: relative;
+    
+}
+.banner .top::before, .banner .top::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    bottom: 10px;
+    border-top: 1px;
+    border-top: 1px solid #989494;
+    border-bottom: 1px solid #989494;
+}
+.banner .top::before {
+    left: 5px;
+}
+.banner .top::after {
+    right: 5px;
+}
+.banner .request {
+    text-transform: capitalize;
+}
+.banner span {
+    text-transform: uppercase;
+}
+.banner form {
+    display: block;
+    width: 350px;
+    height: 500px;
+    background-color: #4a6abf;
+    margin: 60px auto;
+    padding: 30px 40px;
+    position: relative;
+}
+.banner input {
+    background-color: #3d5698;
+    padding: 10px 60px 10px 10px;
+    margin: 10px 0px ;
+    border: none;
+    color: #797272;
+}
+.banner a {
+    color: #fff;
+    text-decoration: none;
+}
+.banner button {
+    background-image: url(images/bg-form-foot.png);
+    background-size: contain;
+    position: relative;
+    width: 380px;
+    height: 90px;
+    border: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    position: absolute;
+    left: -15px;
+    right: 0;
+    bottom: 80px;
+    font-family: 'Oswald', sans-serif;
+}
+.banner button::before, .banner button::after {
+     content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid #af8000;
+    bottom: -15px;
+}
+.banner button::before {
+    border-left: 15px solid transparent;
+    left: 0px;
+}
+.banner button::after {
+    border-right: 15px solid transparent;
+    right: 0px;
+}
+button h2 {
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px auto;
+    background-color: #0f245f;
+    color: #fff;
+    border-radius: 3px;
+}
+.banner .link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    padding: 0px 30px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .banner form {
+        width:400px;
+    }
+    .banner button {
+        width: 430px;
+    }
+    .banner .top::before, .banner .top::after {
+        width: 30px;
+    }
+}
