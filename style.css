@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,600&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+p {
+    margin: 0;
+}
 section {
     font-family: 'EB Garamond', serif;
+    padding: 15px 0;
 }
 .header {
     background-color: #3d5698;
     color: #fff;
     font-size: 18px;
-    padding-top: 10px; 
-}
-.slogan {
-    margin-top: 10px;
 }
 .banner {
     background-image: url(images/img-1.jpg);
@@ -23,32 +24,20 @@ section {
     color: #fff;
     text-align: center;
 }
-.banner h2 {
+.banner h3 {
     text-transform: uppercase;
     font-size: 20px;
 }
-
 .banner .top {
     font-weight: bold;
-    position: relative;
-    
+    background-image: url(images/bg-legend.png);
+    background-repeat: repeat-x;
+    background-position: center;
 }
-.banner .top::before, .banner .top::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 15px;
-    height: 3px;
-    bottom: 10px;
-    border-top: 1px;
-    border-top: 1px solid #989494;
-    border-bottom: 1px solid #989494;
-}
-.banner .top::before {
-    left: 5px;
-}
-.banner .top::after {
-    right: 5px;
+.banner .top span {
+    background-color: #4a6abf;
+    display: inline-block;
+    padding: 0px 30px;
 }
 .banner .request {
     text-transform: capitalize;
@@ -56,43 +45,39 @@ section {
 .banner span {
     text-transform: uppercase;
 }
-.banner form {
-    display: block;
-    width: 350px;
-    height: 500px;
+.banner .form {
     background-color: #4a6abf;
-    margin: 60px auto;
-    padding: 30px 40px;
     position: relative;
+    padding: 30px;
 }
 .banner input {
+    display: block;
+    width: 100%;
     background-color: #3d5698;
     padding: 10px 60px 10px 10px;
-    margin: 10px 0px ;
+    margin: 20px 0px ;
     border: none;
     color: #797272;
+    outline: none;
+}
+.banner input:focus {
+    background-color: #1949b5;
+    color: #fff;
 }
 .banner a {
     color: #fff;
     text-decoration: none;
 }
-.banner button {
+.banner .button {
     background-image: url(images/bg-form-foot.png);
     background-size: contain;
-    position: relative;
-    width: 380px;
     height: 90px;
-    border: none;
-    font-size: 25px;
-    text-transform: uppercase;
-    position: absolute;
-    left: -15px;
-    right: 0;
-    bottom: 80px;
+    margin: 30px -45px 20px;
     font-family: 'Oswald', sans-serif;
+    position: relative;
 }
-.banner button::before, .banner button::after {
-     content: "";
+.banner .button::before, .banner .button::after {
+    content: "";
     display: block;
     position: absolute;
     width: 0px;
@@ -100,41 +85,139 @@ section {
     border-top: 15px solid #af8000;
     bottom: -15px;
 }
-.banner button::before {
+.banner .button::before {
     border-left: 15px solid transparent;
-    left: 0px;
 }
-.banner button::after {
+.banner .button::after {
     border-right: 15px solid transparent;
     right: 0px;
 }
-button h2 {
+.submit {
+    width: 300px;
+    height: 50px;
+    background-color: #1e346c;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 20px;
+    font-size: 24px;
+}
+/*БЛОК 3-4*/
+.content1 {
+    background-image: url(images/01.png);
+}
+h2 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 26px;
+    color: #4a6abf;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.pic {
+    width: 250px;
+    height: 200px;
+    background-color: #3d5698;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.pic::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 10px solid transparent;
+    border-top: 10px solid #3d5698;
+    bottom: -20px;
+/*
+    border-top: 10px solid #3d5698;
+    border-left: 10px solid transparent;
+    transform: rotate(135deg);
+    bottom: -5px*/
+}
+.content1 p, .content2 p {
+    text-align: center;
+    margin: 30px 0px;
+    color: #676767;
+}
+.top_text {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+.content1 h5 {
+    color: #3d5698;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+.content2 .pic {
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+}
+.content2 .pic img {
+    height: inherit;
+    width: 100%;
+}
+/*    БЛОК 5*/
+.support {
+    height: 550px;
+    background-image:url(images/testimonials-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.photo img {
+    display: block;
+    margin: 30px auto;
+    border-radius: 100%;
+    border: 3px solid #be9a39;
+}
+.support p, .support a {
+     text-align: center;
+     color: #333;
+}
+.support p {
+    font-size: 34px;
+    font-style: italic;
+    font-weight: bold;
+}
+.support a {
     display: block;
     width: 250px;
-    height: 50px;
-    line-height: 50px;
     margin: 10px auto;
-    background-color: #0f245f;
-    color: #fff;
-    border-radius: 3px;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
-.banner .link {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px;
-    padding: 0px 30px;
+.support a::before {
+    content: "";
+    display: block;
+    margin: 10px auto;
+    width: 50px;
+    border-bottom: 1.5px solid #000;
 }
-
-
 @media screen and (max-width: 992px) {
-    .banner form {
-        width:400px;
+    .pic {
+    width: 100%; 
     }
-    .banner button {
-        width: 430px;
+    .content2 .pic {
+    width: 100%;
+    height: inherit;
     }
-    .banner .top::before, .banner .top::after {
-        width: 30px;
+    .support p {
+    font-size: 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .content2 .pic {
+    width: 70%;
+    margin: 10px auto;
+    }
+    .support p {
+    font-size: 20px;
     }
 }
