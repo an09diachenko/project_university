@@ -132,11 +132,6 @@ h2 {
     border: 10px solid transparent;
     border-top: 10px solid #3d5698;
     bottom: -20px;
-/*
-    border-top: 10px solid #3d5698;
-    border-left: 10px solid transparent;
-    transform: rotate(135deg);
-    bottom: -5px*/
 }
 .content1 p, .content2 p, .video p, .top_text  {
     text-align: center;
@@ -233,6 +228,10 @@ iframe {
 .register .button {
     background-color: #4a6abf;
     font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+.register ul {
+    margin: 0;
 }
 .register button {
     width: 150px;
@@ -253,17 +252,18 @@ iframe {
 .email {
     background-color: #ffb100;
     color: #fff;
-    padding: 40px;
+    padding: 60px 40px;
+    text-align: center;
 }
 .email .text {
-    padding: 20px;  
-    text-align: center;
+    padding: 30px;  
 }
 .email_items, .submit_items {
     border: none;
     outline: none;
     padding: 15px;
     color: #676767;
+    margin: 15px 0px;
 }
 .submit_items {
     font-family: 'Oswald', sans-serif;
@@ -284,21 +284,74 @@ iframe {
 .contact_us .popular li {
     list-style-type: none;
 }
-.contact_us .social img {
+.social i {
     display: inline-block;
     width: 40px;
     height: 40px;
     margin: 10px 5px;
-    background-color: #ccc;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    font-size: 25px;
+    line-height: 40px;
+    color: #ccc;;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
 }
-.contact_us .contact img {
+.icon {
+    position: relative;
+    margin: 0px 5px;
+}
+.icon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    color: #fff;
+    background-color: rgba(226, 226, 226, 0.8);
+    padding: 10px;
+    font-size: 16px;
+    width: 70px;
+    height: 0px;
+    line-height: 0px;
+    bottom: -36px;
+    right: -10px;
+    border-radius: 2px;
+    display: none;
+}
+.icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    border-bottom: 7px solid rgba(226, 226, 226, 0.8);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    display: none;
+}
+.icon:hover::before {
+    display: block;
+}
+.icon:hover::after {
+    display: block;
+} 
+.linkedin::before {
+    content: "linkedin";
+}
+.youtube::before {
+    content: "youtube";
+}
+.fb::before {
+    content: "facebook";
+}
+.twitter::before {
+    content: "twitter";
+}
+.contact i {
     display: inline-block;
     width: 20px;
     height: 20px;
     margin: 5px;
-    background-color: #ccc;
+    text-align: center;
+    line-height: 20px;  
 }
 /*БЛОК 10*/
 .footer {
@@ -323,6 +376,74 @@ iframe {
         text-align: center;
     }
 }
+
+/*    АНИМАЦИЯ БЛОК 3*/
+
+.banner button:hover {
+    background-color: #4a6abf;
+}
+.steps:hover {
+    animation-name: myanimation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+.steps:hover .pic {
+    background-color: #ffb100;
+}
+.steps:hover .pic::before {
+        border-top-color: #ffb100;
+}
+.steps:hover p, .steps:hover h5 {
+    color: #4a6abf;
+}
+@keyframes myanimation {
+    0% {
+        transform: translateX(0px);
+    }
+    20% {
+         transform: translateX(-10px);
+    }
+    40% {
+        transform: translateX(10px);
+    }
+    60% {
+        transform: translateX(-5px);
+    }
+    80% {
+         transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+/*АНИМАЦИЯ БЛОК 4*/
+
+.info {
+    position: relative;
+}
+.info:hover p {
+    color: #3d5698;
+}
+.info .pic::after {
+    content: "465 000 STUDENTS";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    text-align: center;
+    padding: 50px 0px;
+    font-family: 'Oswald', serif;
+    color: #fff;
+    background-color: #3d5698;;
+    display: none;
+}   
+.info:hover .pic::after {
+    display: block;
+}
+
+/* МЕДИАЗАПРОСЫ */
+
 @media screen and (max-width: 768px) {
     .content2 .pic {
 /*    width: 70%;*/
@@ -333,5 +454,8 @@ iframe {
     }
     .footer {
         font-size: 12px;
+    }
+    .social {
+        text-align: center;
     }
 }
