@@ -154,6 +154,7 @@ h2 {
 /*    width: 250px;*/
     height: auto;
     overflow: hidden;
+    position: relative;
 }
 .content2 .pic img {
     height: inherit;
@@ -418,28 +419,25 @@ iframe {
 }
 /*АНИМАЦИЯ БЛОК 4*/
 
-.info {
-    position: relative;
+.content2 span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #3d5698;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Oswald', serif;
+    padding: 40px 0px;
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 .info:hover p {
     color: #3d5698;
 }
-.info .pic::after {
-    content: "465 000 STUDENTS";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-size: 36px;
-    text-align: center;
-    padding: 50px 0px;
-    font-family: 'Oswald', serif;
-    color: #fff;
-    background-color: #3d5698;;
-    display: none;
-}   
-.info:hover .pic::after {
-    display: block;
+.info:hover span {
+    opacity: 1;
 }
 
 /* МЕДИАЗАПРОСЫ */
