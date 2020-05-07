@@ -218,7 +218,6 @@ iframe {
 }
 .list_items {
     text-align: center;
-    list-style-type: none;
 }
 .register li {
     padding: 10px 0px;
@@ -233,6 +232,7 @@ iframe {
 }
 .register ul {
     margin: 0;
+    list-style-type: none;
 }
 .register button {
     width: 150px;
@@ -245,15 +245,17 @@ iframe {
     margin: 20px;
     font-size: 20px;
 }
+/*
 .register button:hover {
     background-color: #ffb100;
     color: #1e346c;
 }
+*/
 /*БЛОК 8*/
 .email {
     background-color: #ffb100;
     color: #fff;
-    padding: 60px 40px;
+    padding: 30px 0px;
     text-align: center;
 }
 .email .text {
@@ -359,24 +361,6 @@ iframe {
     background-color: #3c3c3c;
     color: #ccc;
 }
-@media screen and (max-width: 992px) {
-    .pic {
-/*    width: 100%; */
-    }
-    .content2 .pic {
-/*    width: 100%;*/
-    height: inherit;
-    }
-    .support p {
-    font-size: 30px;
-    }
-    .video li {
-    margin-top: 0px;
-    }
-    .footer {
-        text-align: center;
-    }
-}
 
 /*    АНИМАЦИЯ БЛОК 3*/
 
@@ -417,6 +401,7 @@ iframe {
         transform: translateX(0px);
     }
 }
+
 /*АНИМАЦИЯ БЛОК 4*/
 
 .content2 span {
@@ -428,7 +413,7 @@ iframe {
     text-transform: uppercase;
     font-size: 36px;
     text-align: center;
-    font-family: 'Oswald', serif;
+    font-family: 'Oswald', sans-serif;
     padding: 40px 0px;
     opacity: 0;
     transition: opacity 1.5s;
@@ -440,7 +425,64 @@ iframe {
     opacity: 1;
 }
 
+/*    АНИМАЦИЯ БЛОК 7*/
+
+.list_items:hover li, .list_items:hover h3, .list_items:hover .button {
+    background-color: #ffb100;
+}
+.list_items:hover li {
+    border-color: transparent;
+}
+.list_items:hover h3 {
+    color: #3d5698;
+}
+.list_items:hover button {
+    color: #ffb100;
+}
+
+.list_items:hover {
+    animation-name: heartbeat;
+    animation-duration: 1s;
+    animation-iteration-count: 1; 
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1, 1);
+
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
 /* МЕДИАЗАПРОСЫ */
+
+@media screen and (max-width: 992px) {
+    .pic {
+/*    width: 100%; */
+    }
+    .content2 .pic {
+/*    width: 100%;*/
+    height: inherit;
+    }
+    .support p {
+    font-size: 30px;
+    }
+    .video li {
+    margin-top: 0px;
+    }
+    .footer {
+        text-align: center;
+    }
+    .content2 span {
+        padding: 100px 0px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .content2 .pic {
@@ -455,5 +497,8 @@ iframe {
     }
     .social {
         text-align: center;
+    }
+    .content2 span {
+        padding: 150px 0px;
     }
 }
